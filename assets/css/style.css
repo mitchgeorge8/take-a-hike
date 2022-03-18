@@ -1,0 +1,10 @@
+body {
+    padding: 30px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.car-item img {
+    width: 100%;
+    height: auto;
+}
