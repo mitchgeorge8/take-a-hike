@@ -2,9 +2,24 @@ body {
     padding: 30px;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
+    color: black;
 }
 
-.car-item img {
+header h1 {
+    font-size: 24px;
+}
+
+header nav ul li a {
+    color: black;
+}
+
+.slider-item {
+    height: 600px;
+}
+
+.image {
     width: 100%;
     height: auto;
+    object-fit: cover;
+    object-position: 50% 50%;
 }

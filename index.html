@@ -11,43 +11,43 @@
 </head>
 <body>
 
-    <header>
-        <h1>Take A Hike</h1>
-        <nav>
-            <ul>
+    <header class="columns">
+        <h1 class="column is-half">Take A Hike</h1>
+        <nav class="column">
+            <ul class="columns is-justify-content-end">
                 <li>
-                    <a href="#locations">Locations</a>
+                    <a class="column" href="#locations">Locations</a>
                 </li>
                 <li>
-                    <a href="#weather">Weather</a>
+                    <a class="column" href="#weather">Weather</a>
                 </li>
                 <li>
-                    <a href="#images">Images</a>
+                    <a class="column" href="#images">Images</a>
                 </li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="section">
+        <section>
             <div class="container">
                 <!-- Start Carousel -->
-                <div id="carousel" class="carousel">
-                    <div class="car-item item-1">
+                <div id="carousel" class="carousel columns is-full">
+                    <div class="column item-1">
                         <!-- Slide Content -->
-                        <img src="./assets/images/hocking-hills-1.png">
+                        <img class="image" src="./assets/images/hocking-hills-1.png">
                     </div>
-                    <div class="car-item item-2">
+                    <div class="column item-2">
                         <!-- Slide Content -->
-                        <img src="./assets/images/glen-helen.png">
+                        <img class="image" src="./assets/images/glen-helen.png">
                     </div>
-                    <div class="car-item item-3">
+                    <div class="column item-3">
                         <!-- Slide Content -->
-                        <img src="./assets/images/hocking-hills-2.png">
+                        <img class="image" src="./assets/images/hocking-hills-2.png">
                     </div>
-                    <div class="car-item item-4">
+                    <div class="column item-4">
                         <!-- Slide Content -->
-                        <img src="./assets/images/mill-creek-park.png">
+                        <img class="image" src="./assets/images/mill-creek-park.png">
                     </div>
                 </div>
                 <!-- End Carousel -->
@@ -55,7 +55,7 @@
         </section>
     
         <section id="locations">
-
+            <div></div>
         </section>
 
         <section id="weather">
@@ -73,6 +73,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    <script src="https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=SvUtQt7JEcYzRFyXh0G6YoEbyWU8oaHmZvOG1S4C"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
