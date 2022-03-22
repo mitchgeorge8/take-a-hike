@@ -17,9 +17,28 @@ header nav ul li a {
     height: 600px;
 }
 
+.car-item {
+    height: auto;
+}
+
 .image {
     width: 100%;
     height: auto;
     object-fit: cover;
     object-position: 50% 50%;
 }
+
+section {
+    padding: 20px 0;
+}
+
+.locations {
+    text-align: center;
+    height: fit-content;
+}
+
+.dropdown {
+    height: fit-content;
+    text-align: center;
+}
+

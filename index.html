@@ -33,19 +33,19 @@
             <div class="container">
                 <!-- Start Carousel -->
                 <div id="carousel" class="carousel columns is-full">
-                    <div class="column item-1">
+                    <div class="column item-1 car-item">
                         <!-- Slide Content -->
                         <img class="image" src="./assets/images/hocking-hills-1.png">
                     </div>
-                    <div class="column item-2">
+                    <div class="column item-2 car-item">
                         <!-- Slide Content -->
                         <img class="image" src="./assets/images/glen-helen.png">
                     </div>
-                    <div class="column item-3">
+                    <div class="column item-3 car-item">
                         <!-- Slide Content -->
                         <img class="image" src="./assets/images/hocking-hills-2.png">
                     </div>
-                    <div class="column item-4">
+                    <div class="column item-4 car-item">
                         <!-- Slide Content -->
                         <img class="image" src="./assets/images/mill-creek-park.png">
                     </div>
@@ -54,8 +54,34 @@
             </div>
         </section>
     
-        <section id="locations">
-            <div></div>
+        <section id="locations" class="locations columns">
+            <div class="dropdown column is-half">
+                <div class="dropdown-trigger">
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                    <span>Select State</span>
+                    <span class="icon is-small">
+                      <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                  <div class="dropdown-content ">
+                    <a class="dropdown-item">
+                      Dropdown item
+                    </a>
+                    <a class="dropdown-item">
+                      Other dropdown item
+                    </a>
+                    <a class="dropdown-item">
+                      Active dropdown item
+                    </a>
+                    <a class="dropdown-item">
+                      Other dropdown item
+                    </a>
+                  </div>
+                </div>
+              </div>
+            <div id="parks-container" class="container"></div>
         </section>
 
         <section id="weather">
@@ -73,7 +99,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
-    <script src="https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=SvUtQt7JEcYzRFyXh0G6YoEbyWU8oaHmZvOG1S4C"></script>
+    <script src="https://kit.fontawesome.com/3190fd9e9f.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
