@@ -57,9 +57,6 @@ a {
     height: 600px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url("../images/hero1.jpg");
-    background-size: cover;
-    background-position: center;
 }
 
 .float-left {
