@@ -1,32 +1,34 @@
-let apiKey = "SvUtQt7JEcYzRFyXh0G6YoEbyWU8oaHmZvOG1S4C";
+const apiKey = "SvUtQt7JEcYzRFyXh0G6YoEbyWU8oaHmZvOG1S4C";
 
-let parksContainerEl = document.querySelector("#parks-container");
-let dropDownContentEl = document.querySelector(".dropdown-content");
+let selectEl = $(".select");
+let parksContainerEl = $("#parks-container");
+let parksListEl = $(".parks-list");
 
-bulmaCarousel.attach('#carousel', {
+
+let stateArr = ["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"];
+
+let stateAbrArr = ["AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"];
+
+bulmaCarousel.attach("#carousel", {
     slidesToScroll: 1,
     slidesToShow: 1,
     infinite: true
 });
 
-//DOMContentLoaded - it fires when initial HTML document has been completely loaded
-document.addEventListener('DOMContentLoaded', function () {
-    // querySelector - it returns the element within the document that matches the specified selector
-    var dropdown = document.querySelector('.dropdown');
-      
-    //addEventListener - attaches an event handler to the specified element.
-    dropdown.addEventListener('click', function(event) {
-      
-       //event.stopPropagation() - it stops the bubbling of an event to parent elements, by preventing parent event handlers from being executed
-       event.stopPropagation();
-        
-       //classList.toggle - it toggles between adding and removing a class name from an element
-       dropdown.classList.toggle('is-active');
-    });
- });        
+selectEl.on("change", function(event) {
+    let value = selectEl.val();
 
-let addStateList = function() {
+    getLocations(value);
+})
 
+let addStateDropdown = function() {
+    for (i=0; i<stateArr.length; i++) {
+        let optionEl = $("<option>")
+            .attr("value", stateAbrArr[i])
+            .text(stateArr[i]);
+
+        selectEl.append(optionEl);
+    }
 };
 
 let getLocations = function(state) {
@@ -50,30 +52,32 @@ let getLocations = function(state) {
 }
 
 let displayParks = function(parks) {
+    parksListEl.text("");
+
     if (parks.length === 0) {
-        parksContainerEl.textContent = "This state has no parks.";
+        parksListEl.textContent = "This state has no parks.";
         return;
     }
 
-    console.log(parks);
-
     for (let i = 0; i < parks.length; i++) {
-        console.log(parks[i]);
+        let listItemEl = $("<li>")
+            .addClass("box");
 
         // create a link element to take users to the park website
-        let parkEl = document.createElement("a");
-        parkEl.setAttribute("href", parks[i].url)
-        parkEl.setAttribute("target", "_blank");
+        let parkEl = $("<a>")
+            .attr("href", parks[i].url)
+            .attr("target", "_blank");
 
         // create span to hold park name
-        let nameEl = document.createElement("span");
-        nameEl.textContent = parks[i].fullName;
+        let nameEl = $("<span>")
+            .text(parks[i].fullName)
+            .addClass("has-text-black");
 
-        // append to container
-        parkEl.appendChild(nameEl);
-
-        parksContainerEl.appendChild(parkEl);
+        // append to containers
+        parkEl.append(nameEl);
+        listItemEl.append(parkEl)
+        parksListEl.append(listItemEl);
     }
 };
 
-getLocations("OH");
+addStateDropdown();

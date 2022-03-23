@@ -32,13 +32,11 @@ section {
     padding: 20px 0;
 }
 
-.locations {
-    text-align: center;
-    height: fit-content;
+.select {
+    padding: 0;
+    padding-left: .5em;
 }
 
-.dropdown {
-    height: fit-content;
-    text-align: center;
+.box:not(:last-child) {
+    margin-bottom: 5px;
 }
-

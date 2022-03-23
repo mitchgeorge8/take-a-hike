@@ -54,34 +54,18 @@
             </div>
         </section>
     
-        <section id="locations" class="locations columns">
-            <div class="dropdown column is-half">
-                <div class="dropdown-trigger">
-                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                    <span>Select State</span>
-                    <span class="icon is-small">
-                      <i class="fas fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                  </button>
+        <section id="locations" class="locations">
+            <h2 class="content is-large has-text-centered">Find National Parks!</h2>
+            <div class="columns">
+                <div class="column is-half has-text-centered">
+                    <select class="select is-medium box">
+                        <option class="has-background-grey-lighter">Select State</option>
+                    </select>
                 </div>
-                <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                  <div class="dropdown-content ">
-                    <a class="dropdown-item">
-                      Dropdown item
-                    </a>
-                    <a class="dropdown-item">
-                      Other dropdown item
-                    </a>
-                    <a class="dropdown-item">
-                      Active dropdown item
-                    </a>
-                    <a class="dropdown-item">
-                      Other dropdown item
-                    </a>
-                  </div>
+                <div id="parks-container" class="column is-half">
+                    <ul class="parks-list"></ul>
                 </div>
-              </div>
-            <div id="parks-container" class="container"></div>
+            </div>
         </section>
 
         <section id="weather">
