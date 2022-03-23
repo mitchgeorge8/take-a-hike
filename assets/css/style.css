@@ -19,6 +19,15 @@ body {
     background-color: #d9dcd6;
 }
 
+.hero {
+    height: 800px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/hero1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
 .header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -57,7 +66,6 @@ a {
     height: 600px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url("../images/hero1.jpg");
     background-size: cover;
     background-position: center;
 }
