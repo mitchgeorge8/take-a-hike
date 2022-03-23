@@ -19,14 +19,6 @@ body {
     background-color: #d9dcd6;
 }
 
-.hero {
-    height: 800px;
-    width: 100%;
-    margin-bottom: 25px;
-    background-image: url("../images/hero1.jpg");
-    background-size: cover;
-    background-position: center;
-}
 
 .header {
     padding: 20px;
@@ -66,8 +58,6 @@ a {
     height: 600px;
     width: 100%;
     margin-bottom: 25px;
-    background-size: cover;
-    background-position: center;
 }
 
 .float-left {
