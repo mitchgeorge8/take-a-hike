@@ -16,6 +16,7 @@ const key = "29cddfeb1ce63551dd6d2d389e8b733a";
 function setPosition(position){
     let latitude = 41.0998;
     let longitude = 80.6495;
+    let position=(latitude, longitude);
 
     getWeather(latitude,longitude);
 }
@@ -38,7 +39,7 @@ function getWeather(latitude, longitude){
         });
 }
 function displayWeather(){
-    temp.Element.innerHTML= `${weather.temperature.value}°<span>F</span>`;
+    tempElement.innerHTML= `${weather.temperature.value}°<span>F</span>`;
     descElement.innerHTML = weather.description;
     locationElement.innerHTML = `${weather.city}, ${weather.country}`;
 }
