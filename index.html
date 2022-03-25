@@ -11,51 +11,61 @@
 </head>
 <body>
 
-    <header>
-        <h1>Take A Hike</h1>
-        <nav>
-            <ul>
+    <header class="columns">
+        <h1 class="column is-half">Take A Hike</h1>
+        <nav class="column">
+            <ul class="columns is-justify-content-end">
                 <li>
-                    <a href="#locations">Locations</a>
+                    <a class="column" href="#locations">Locations</a>
                 </li>
                 <li>
-                    <a href="#weather">Weather</a>
+                    <a class="column" href="#weather">Weather</a>
                 </li>
                 <li>
-                    <a href="#images">Images</a>
+                    <a class="column" href="#images">Images</a>
                 </li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="section">
+        <section>
             <div class="container">
                 <!-- Start Carousel -->
-                <div id="carousel" class="carousel">
-                    <div class="car-item item-1">
+                <div id="carousel" class="carousel columns is-full">
+                    <div class="column item-1 car-item">
                         <!-- Slide Content -->
-                        <img src="./assets/images/hocking-hills-1.png">
+                        <img class="image" src="./assets/images/hocking-hills-1.png">
                     </div>
-                    <div class="car-item item-2">
+                    <div class="column item-2 car-item">
                         <!-- Slide Content -->
-                        <img src="./assets/images/glen-helen.png">
+                        <img class="image" src="./assets/images/glen-helen.png">
                     </div>
-                    <div class="car-item item-3">
+                    <div class="column item-3 car-item">
                         <!-- Slide Content -->
-                        <img src="./assets/images/hocking-hills-2.png">
+                        <img class="image" src="./assets/images/hocking-hills-2.png">
                     </div>
-                    <div class="car-item item-4">
+                    <div class="column item-4 car-item">
                         <!-- Slide Content -->
-                        <img src="./assets/images/mill-creek-park.png">
+                        <img class="image" src="./assets/images/mill-creek-park.png">
                     </div>
                 </div>
                 <!-- End Carousel -->
             </div>
         </section>
     
-        <section id="locations">
-
+        <section id="locations" class="locations">
+            <h2 class="content is-large has-text-centered">Find National Parks!</h2>
+            <div class="columns">
+                <div class="column is-half has-text-centered">
+                    <select class="select is-medium box">
+                        <option class="has-background-grey-lighter">Select State</option>
+                    </select>
+                </div>
+                <div id="parks-container" class="column is-half">
+                    <ul class="parks-list"></ul>
+                </div>
+            </div>
         </section>
 
         <section id="weather">
@@ -73,6 +83,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    <script src="https://kit.fontawesome.com/3190fd9e9f.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
