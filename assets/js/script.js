@@ -2,6 +2,7 @@ const apiKey = "SvUtQt7JEcYzRFyXh0G6YoEbyWU8oaHmZvOG1S4C";
 
 let selectEl = $(".select");
 let parksContainerEl = $("#parks-container");
+let parksHeaderEl = $(".parks-header");
 let parksListEl = $(".parks-list");
 
 
@@ -15,34 +16,36 @@ bulmaCarousel.attach("#carousel", {
     infinite: true
 });
 
-selectEl.on("change", function(event) {
-    let value = selectEl.val();
-
-    getLocations(value);
-})
-
 let addStateDropdown = function() {
     for (i=0; i<stateArr.length; i++) {
         let optionEl = $("<option>")
+            .text(stateArr[i])
             .attr("value", stateAbrArr[i])
-            .text(stateArr[i]);
+            .addClass("is-size-5");
 
         selectEl.append(optionEl);
     }
 };
 
-let getLocations = function(state) {
-    let apiUrl = "https://developer.nps.gov/api/v1/parks?stateCode=" + state + "&api_key=" + apiKey;
+selectEl.on("change", function(event) {
+    let value = selectEl.val();
+    let state = $(".select :selected").text();
+
+    getLocations(value, state);
+})
+
+let getLocations = function(abbr, state) {
+    let apiUrl = "https://developer.nps.gov/api/v1/parks?stateCode=" + abbr + "&api_key=" + apiKey;
 
     fetch(apiUrl).then(function(response) {
         if (response.ok) {
             response.json().then(function(data) {
                 // pass response data to dom function
-                displayParks(data.data);
+                displayParks(data.data, state);
 
                 // check if api has paginated issues
                 if (response.headers.get("Link")) {
-                    displayWarning(state);
+                    displayWarning(abbr);
                 }
             });
         } else {
@@ -51,13 +54,16 @@ let getLocations = function(state) {
     });
 }
 
-let displayParks = function(parks) {
+let displayParks = function(parks, state) {
+    parksHeaderEl.text("");
     parksListEl.text("");
 
     if (parks.length === 0) {
         parksListEl.textContent = "This state has no parks.";
         return;
     }
+
+    parksHeaderEl.text("National Parks in " + state);
 
     for (let i = 0; i < parks.length; i++) {
         let listItemEl = $("<li>")
@@ -71,7 +77,7 @@ let displayParks = function(parks) {
         // create span to hold park name
         let nameEl = $("<span>")
             .text(parks[i].fullName)
-            .addClass("has-text-black");
+            .addClass("has-text-black is-size-5");
 
         // append to containers
         parkEl.append(nameEl);

@@ -32,6 +32,19 @@ section {
     padding: 20px 0;
 }
 
+#parks-container {
+    height: 400px;
+}
+
+.parks-list {
+    max-height: 90%;
+    overflow: auto;
+}
+
+.parks-list li {
+    display: block;
+}
+
 .select {
     padding: 0;
     padding-left: .5em;
