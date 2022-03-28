@@ -27,7 +27,8 @@
         </ul>
       </nav>
     </header>
-    <!-- <div class="hero"> -->
+
+    <!-- hero carousel -->
         <div class="container-carousel-hike">
             <!-- Start Carousel -->
             <div id="carousel" class="carousel">
@@ -49,7 +50,7 @@
                 </div>
             </div>
         </div>
-    <!-- </div> -->
+
     <main class="content">
         <section class="where-to-go">
             <img src="./assets/images/where-to-go.jpg" alt="Where to go?" class="float-left" />
@@ -57,28 +58,25 @@
             <p>
                 From the beautiful shores and islands of Lake Erie, through the rolling hills of the Hocking Valley, all the way to the waters of the great Ohio River, the Buckeye State is a magical place.
 
-Nationally, interest and participation in outdoor activities, especially camping, hiking, and kayaking, is on the rise. Each year, hundreds of thousands of visitors enjoy a variety of outdoor activities such as camping, hiking, biking, swimming, boating and much, much more at Ohio State Parks.
+                Nationally, interest and participation in outdoor activities, especially camping, hiking, and kayaking, is on the rise. Each year, hundreds of thousands of visitors enjoy a variety of outdoor activities such as camping, hiking, biking, swimming, boating and much, much more at Ohio State Parks.
             </p>
         </section>
       
-        <section id="locations" class="finding-parks">
-            <img src="./assets/images/locations.jpeg" alt="Finding parks" class="float-right" />
-            <h2>Finding Parks</h2>
-            <p>
-                Check out some of the best national parks in Ohio!
-            </p>
-              <div class="columns is-flex is-vcentered">
-                  <div class="column is-4 has-text-centered">
-                      <h3 class="is-size-4 pb-3">Select a state to find National Parks</h3>
-                      <select class="select is-medium box">
-                          <option class="has-background-grey-lighter is-size-5">Select State</option>
-                      </select>
-                  </div>
-                  <div id="parks-container" class="column is-8">
-                      <h3 class="parks-header has-text-centered is-size-4"></h3>
-                      <ul class="parks-list"></ul>
-                  </div>
-              </div>
+        <section id="locations" class="locations columns">
+            <div class="column is-3">
+                <h2>Finding Parks</h2>
+                <p>
+                    Check out some of the best national parks in Ohio!
+                </p>
+                <select class="select is-size-6 box p-0 pl-2">
+                    <option class="has-background-grey-lighter is-size-6">Select State</option>
+                </select>
+            </div>
+            <div id="parks-container" class="column is-6">
+                <h3 class="parks-header has-text-centered is-size-5 has-text-white m-0">Select a state from the dropdown</h3>
+                <ul class="parks-list m-0"></ul>
+            </div>
+            <img src="./assets/images/locations.jpeg" alt="Finding parks" class="float-right column is-3"/>
         </section>
       
         <section id="weather" class="weather">

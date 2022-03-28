@@ -13,7 +13,6 @@
     background-color: #ffffff;
 }
 
-
 .header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -56,12 +55,10 @@ a {
 
 .float-left {
     float: left;
-    margin-right: 25px;
 }
 
 .float-right {
     float: right;
-    margin-left: 25px;
 }
 
 .content {
@@ -70,43 +67,20 @@ a {
     margin-left: 20px;
 }
 
-.where-to-go {
+section {
     margin-bottom: 20px;
     padding: 50px;
-    height: 300px;
+    height: 400px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #93c47d;
     color: #ffffff;
 }
 
-.finding-parks {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #93c47d;
-    color: #ffffff;
-}
-
-.weather {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #93c47d;
-    color: #ffffff;
-}
-
-.where-to-go img {
-    max-height: 200px;
-}
-
-.finding-parks img {
-    max-height: 200px;
-}
-
-.weather img {
-    max-height: 200px;
+section img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    object-position: 50% 50%;
 }
 
 .where-to-go h2 {
@@ -115,7 +89,7 @@ a {
     color: white;
 }
 
-.finding-parks h2 {
+.locations h2 {
     margin-bottom: 20px;
     font-size: 36px;
     color: white;
@@ -142,7 +116,6 @@ a {
     margin-bottom: 32px;
     color: #ffffff; 
 }
-
 
 .fact-hocking-hills {
     margin-bottom: 32px;
@@ -210,15 +183,23 @@ a {
     object-position: 50% 50%;
 }
 
-.box:not(:last-child) {
-    margin-bottom: 5px;
-    padding: 10px;
-}
-
 .slider-item {
     height:600px
 }
 
 .car-item {
     padding: 10px;
+}
+
+.parks-header {
+    height: 10%;
+}
+
+.parks-list {
+    height: 90%;
+    overflow: auto;
+}
+
+.columns {
+    margin: 0;
 }
