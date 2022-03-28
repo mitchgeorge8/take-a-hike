@@ -9,7 +9,7 @@
     margin: 0;
 }
 
-body {
+.image {
     background-color: #ffffff;
 }
 
@@ -203,12 +203,15 @@ a {
     font-size: 20px;
 }
 
-
 .carousel {
     width: auto;
     height: auto;
     object-fit: cover;
     object-position: 50% 50%;
+}
+
+.box:not(:last-child) {
+    margin-bottom: 5px;
     padding: 10px;
 }
 
