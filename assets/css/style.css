@@ -206,6 +206,30 @@ a {
 .carousel {
     width: auto;
     height: auto;
+}
+
+.images h2 {
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+    width: auto;
+}
+.images h3 {
+    font-size: 30px;
+    font-weight: bold;
+    font-style: oblique;
+    width: auto;
+}
+.images h4 {
+    font-size: 25px;
+    width: auto;
+}
+
+.images iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
     object-fit: cover;
     object-position: 50% 50%;
 }
