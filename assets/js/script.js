@@ -1,10 +1,9 @@
-const apiKey = "SvUtQt7JEcYzRFyXh0G6YoEbyWU8oaHmZvOG1S4C";
+const apiKeyLocations = "SvUtQt7JEcYzRFyXh0G6YoEbyWU8oaHmZvOG1S4C";
 
 let selectEl = $(".select");
 let parksContainerEl = $("#parks-container");
 let parksHeaderEl = $(".parks-header");
 let parksListEl = $(".parks-list");
-
 
 let stateArr = ["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"];
 
@@ -15,9 +14,6 @@ bulmaCarousel.attach("#carousel", {
     slidesToShow: 1,
     infinite: true
 });
-
-
-
 
 //weather
 
@@ -42,14 +38,49 @@ function checkWeather() {
         $("#wind_speed_unit").append (" MPH");
         $("#main_temp_unit").append (" F");
     });
-}
+  };
 
+let addStateDropdown = function() {
+    for (i=0; i<stateArr.length; i++) {
+        let optionEl = $("<option>")
+            .text(stateArr[i])
+            .attr("value", stateAbrArr[i])
+            .addClass("is-size-6");
 
+        selectEl.append(optionEl);
+    }
+};
 
+selectEl.on("change", function(event) {
+    let value = selectEl.val();
+    let state = $(".select :selected").text();
+
+    getLocations(value, state);
+})
+
+let getLocations = function(abbr, state) {
+    let apiUrl = "https://developer.nps.gov/api/v1/parks?stateCode=" + abbr + "&api_key=" + apiKeyLocations;
+
+    fetch(apiUrl).then(function(response) {
+        if (response.ok) {
+            response.json().then(function(data) {
+                // pass response data to dom function
+                displayParks(data.data, state);
+
+                // check if api has paginated issues
+                if (response.headers.get("Link")) {
+                    displayWarning(abbr);
+                }
+            });
+        } else {
+            alert("There was a problem with your request!");
+        }
+    });
+};
 
 // parks
 let displayParks = function(parks, state) {
-    parksHeaderEl.text("");
+    parksHeaderEl.text("Select a state from the dropdown");
     parksListEl.text("");
 
     if (parks.length === 0) {
@@ -61,7 +92,7 @@ let displayParks = function(parks, state) {
 
     for (let i = 0; i < parks.length; i++) {
         let listItemEl = $("<li>")
-            .addClass("box");
+            .addClass("box m-1 p-2");
 
         // create a link element to take users to the park website
         let parkEl = $("<a>")
@@ -71,7 +102,7 @@ let displayParks = function(parks, state) {
         // create span to hold park name
         let nameEl = $("<span>")
             .text(parks[i].fullName)
-            .addClass("has-text-black is-size-5");
+            .addClass("has-text-black is-size-6");
 
         // append to containers
         parkEl.append(nameEl);
