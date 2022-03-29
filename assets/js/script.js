@@ -26,6 +26,7 @@ function checkWeather() {
         "url": "http://api.openweathermap.org/data/2.5/weather?zip=82190,us&appid=da25d74f97cef3d0289a4a9c43c9c6af&units=imperial",
         "method": "GET"
     };
+
     //run function
     $.ajax(settings)
     //console log and display response
