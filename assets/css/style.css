@@ -208,41 +208,47 @@ a {
     height: auto;
 }
 
-.images h2 {
-    font-size: 50px;
-    font-weight: bold;
-    font-style: italic;
-    width: auto;
-}
-.images h3 {
-    font-size: 30px;
-    font-weight: bold;
-    font-style: oblique;
-    width: auto;
-}
-.images h4 {
-    font-size: 25px;
-    width: auto;
+
+* {
+	box-sizing: border-box;
 }
 
-.images iframe {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    object-fit: cover;
-    object-position: 50% 50%;
+.card {
+	background-color: #fff;
+	border-radius: 8px;
+	max-width: 300px;
+	margin: 10% auto;
+	height: 200px;
+	position: relative;
+	padding: 34px;
+	color: #444;
+	cursor: pointer;
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		background-color: #ccc;
+		left: 20px;
+		right: 20px;
+		bottom: 0;
+		top: 50%;
+		z-index: -1;
+		box-shadow: 0 0 40px lighten(#000, 60%);
+		transition: box-shadow .2s ease-in-out;
+	}
+	&.level-3 {
+		&:hover {
+			&:before {
+				box-shadow: 0 0 80px lighten(#000, 60%);
+			}
+		}
+	}
 }
-
-.box:not(:last-child) {
-    margin-bottom: 5px;
-    padding: 10px;
+.weather {
+    rowspan: 3;
 }
-
-.slider-item {
-    height:600px
-}
-
-.car-item {
-    padding: 10px;
+.container-1{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px,200px));
+	grid-gap: 0.5em;
 }

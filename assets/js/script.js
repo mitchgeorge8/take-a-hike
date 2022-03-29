@@ -16,83 +16,35 @@ bulmaCarousel.attach("#carousel", {
     infinite: true
 });
 
+
+
+
 //weather
-const weather = {}
+function checkWeather() {
+    var settings ={
+        "async": true,
+        "crossDomain": true,
+        "dataType": "json",
+        "url": "http://api.openweathermap.org/data/2.5/weather?zip=82190,us&appid=da25d74f97cef3d0289a4a9c43c9c6af&units=imperial",
+        "method": "GET"
+    };
+    $.ajax(settings)
 
-weather.temperature = {
-    unit : "farenheight"
-}
-const key = "29cddfeb1ce63551dd6d2d389e8b733a";
+    .done(function (response) {
+        console.log(response);
 
-function setPosition(position){
-    let latitude = 41.0998;
-    let longitude = 80.6495;
-    let position=(latitude, longitude);
-
-    getWeather(latitude,longitude);
-}
-
-function getWeather(latitude, longitude){
-    let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
-
-    fetch (api)
-        .then (function(response){
-            let data =response.json();
-            return data;
-        })
-        .then(function(data){
-            weather.temperature.value=data.main.temp;
-            weather.description=data.weather[0].description;
-            weather.city=data.name
-        })
-        .then(function(){
-            displayWeather();
-        });
-}
-function displayWeather(){
-    tempElement.innerHTML= `${weather.temperature.value}°<span>F</span>`;
-    descElement.innerHTML = weather.description;
-    locationElement.innerHTML = `${weather.city}, ${weather.country}`;
-}
-
-let addStateDropdown = function() {
-    for (i=0; i<stateArr.length; i++) {
-        let optionEl = $("<option>")
-            .text(stateArr[i])
-            .attr("value", stateAbrArr[i])
-            .addClass("is-size-5");
-
-        selectEl.append(optionEl);
-    }
-};
-
-selectEl.on("change", function(event) {
-    let value = selectEl.val();
-    let state = $(".select :selected").text();
-
-    getLocations(value, state);
-})
-
-let getLocations = function(abbr, state) {
-    let apiUrl = "https://developer.nps.gov/api/v1/parks?stateCode=" + abbr + "&api_key=" + apiKey;
-
-    fetch(apiUrl).then(function(response) {
-        if (response.ok) {
-            response.json().then(function(data) {
-                // pass response data to dom function
-                displayParks(data.data, state);
-
-                // check if api has paginated issues
-                if (response.headers.get("Link")) {
-                    displayWarning(abbr);
-                }
-            });
-        } else {
-            alert("There was a problem with your request!");
-        }
+        $("#wind_speed").append (response.wind.speed);
+        $("#main_temp").append (response.main.temp);
+        $("#weather_conditions").append (response.weather[0].main);
+        $("#wind_speed_unit").append (" MPH");
+        $("#main_temp_unit").append (" F");
     });
 }
 
+
+
+
+// parks
 let displayParks = function(parks, state) {
     parksHeaderEl.text("");
     parksListEl.text("");

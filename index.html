@@ -1,182 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Take a Hike!</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-  </head>
-  
-  <body>
-    <header class="header">
-      <h1 class="page-title">Take a Hike!</h1>
-      <nav>
-        <ul>
-          <li>
-            <a href="#Where-to-go">Where to go?</a>
-          </li>
-          <li>
-            <a href="#locations">Locations</a>
-          </li>
-          <li>
-            <a href="#finding-parks">Weather</a>
-          </li>
-        </ul>
-      </nav>
+    
+    <title>Take A Hike</title>
+</head>
+<body>
+
+    <header>
+        <h1>Take A Hike</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#locations">Locations</a>
+                </li>
+                <li>
+                    <a href="#weather">Weather</a>
+                </li>
+                <li>
+                    <a href="#images">Images</a>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <!-- <div class="hero"> -->
-        <div class="container-carousel-hike">
-            <!-- Start Carousel -->
-            <div id="carousel" class="carousel">
-                <div class="car-item item-1">
-                    <!-- Slide Content -->
-                    <img class="image" src="./assets/images/hocking-hills-1.png">
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <!-- Start Carousel -->
+                <div id="carousel" class="carousel">
+                    <div class="car-item item-1">
+                        <!-- Slide Content -->
+                        <img src="./assets/images/hocking-hills-1.png">
+                    </div>
+                    <div class="car-item item-2">
+                        <!-- Slide Content -->
+                        <img src="./assets/images/glen-helen.png">
+                    </div>
+                    <div class="car-item item-3">
+                        <!-- Slide Content -->
+                        <img src="./assets/images/hocking-hills-2.png">
+                    </div>
+                    <div class="car-item item-4">
+                        <!-- Slide Content -->
+                        <img src="./assets/images/mill-creek-park.png">
+                    </div>
                 </div>
-                <div class="car-item item-2">
-                    <!-- Slide Content -->
-                    <img class="image" src="./assets/images/glen-helen.png">
-                </div>
-                <div class="car-item item-3">
-                    <!-- Slide Content -->
-                    <img class="image" src="./assets/images/hocking-hills-2.png">
-                </div>
-                <div class="car-item item-4">
-                    <!-- Slide Content -->
-                    <img class="image" src="./assets/images/mill-creek-park.png">
-                </div>
+                <!-- End Carousel -->
             </div>
+        </section>
+    
+        <section id="locations">
+
+        </section>
+
+        <section class ="weather" id="weather">
+            <h2>Top National Parks Weather</h2>
+            <button type="button" onclick="checkWeather()" class="btn btn-danger weatherbutton">Check Weather</button>
+           <div class="container-1">
+            
+            <div class="card level-3 row" id="0">
+            
+            <h3>Yellowstone National Park</h3>
+            <span><b>Temperature: </b></span><span id="main_temp"></span><span id="main_temp_unit"></span><br />
+            <span><b>Wind speed: </b></span><span id="wind_speed"></span> <span id="wind_speed_unit"></span><br />
+            <span><b>Current conditions: </b></span><span id="weather_conditions"></span>
         </div>
-    <!-- </div> -->
-    <main class="content">
-        <section class="where-to-go">
-            <img src="./assets/images/where-to-go.jpg" alt="Where to go?" class="float-left" />
-            <h2>Where to go?</h2>
-            <h2>
-                "Why should I, 'Take a Hike', in Ohio?"
-            </h2>
-            <h4>
-                In addition to a Great Lakes coastline, rivers, and forests; hiking trails in Ohio include cool caves, spectacular waterfalls, deeply carved gorges, and grasslands dotted with wildflowers.
-                <br> 
-                These picturesque settings are nearly perfect for hikes with friends and family, or just exploring on one's own. Get out there and experience how mother nature has graced <i>The Buckeye State</i>!
-            </h4>
-            <br>
-            <h3>
-                Still can't picture it? Need to convince your fellow hikers to tag-along? Or just want to know what to expect? 
-                We've got you covered. Check out the video below:
-            </h3>
-            <br>
-            <iframe width="660" height="415" src="https://www.youtube.com/embed/c94tAOAXbZA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <br>
-            <h3>
-                Need a hike with more accessibility? Not a huge fan of the deep woods? Or just forgot where you left your hiking boots? 
-                <br>
-                ... We've got you covered here too. Enter the "Metropark":
-            </h3>
-            <br>
-            <h2>
-                Ohio's Regional Parks ('Metroparks'): Ease of Access = Less Physical Demand. 
-            </h2>
-            <h4>
-                In the United States, a regional park is sometimes referred to as a "metropolitan park" (metropark), or as an "open space reserve". Ohio's metroparks are public agencies serving the citizens of Ohio by providing a regional system of clean, safe, natural area parks.
-                The mission of Metro Parks is to conserve open spaces, while providing places and opportunities that encourage people to discover and experience nature.
-            </h4>
-            <h3>
-                Need some visual aid for metroparks? We've got you covered here also. Check out the video below:
-            </h3>
+        <div class="card level-3 row" id="1">
+             
+            <h3>Coming Soon!</h3>
+            <span><b>Temperature: </b></span><span id="main_temp"></span><span id="main_temp_unit"></span><br />
+            <span><b>Wind speed: </b></span><span id="wind_speed"></span> <span id="wind_speed_unit"></span><br />
+            <span><b>Current conditions: </b></span><span id="weather_conditions1"></span>
+        </div>
+        <div class="card level-3 row" id="2">
+           
+            <h3>Coming Soon!</h3>
+            <span><b>Temperature: </b></span><span id="main_temp"></span><span id="main_temp_unit"></span><br />
+            <span><b>Wind speed: </b></span><span id="wind_speed"></span> <span id="wind_speed_unit"></span><br />
+            <span><b>Current conditions: </b></span><span id="weather_conditions"></span>
+        </div>
+        </div>
         </section>
-      
-        <section id="locations" class="finding-parks">
-            <img src="./assets/images/locations.jpeg" alt="Finding parks" class="float-right" />
-            <h2>Finding Parks</h2>
-            <p>
-                Check out some of the best national parks in Ohio!
-            </p>
-              <div class="columns is-flex is-vcentered">
-                  <div class="column is-4 has-text-centered">
-                      <h3 class="is-size-4 pb-3">Select a state to find National Parks</h3>
-                      <select class="select is-medium box">
-                          <option class="has-background-grey-lighter is-size-5">Select State</option>
-                      </select>
-                  </div>
-                  <div id="parks-container" class="column is-8">
-                      <h3 class="parks-header has-text-centered is-size-4"></h3>
-                      <ul class="parks-list"></ul>
-                  </div>
-              </div>
+
+        <section id="images">
+
         </section>
-      
-        <section id="weather" class="weather">
-            <img src="./assets/images/weather.jpg" alt="Weather" class="float-left" />
-            <h2>Weather</h2>
-            <p>
-                Find what the weather will be like at your park!
-            </p>
-          <!--Set current weather for park 1-->
-            <div class="parkname"></div>
-                <h2>Hocking Hills</h2>
-                <div class="row" data-attr="0">
-                    <div class="card">
-                        <h3 class="card-date"><span></span></h3>
-                        <p class="card-weather-icon"><span></span></p>
-                        <p class="card-temperature">Temp: <span></span>°F</p>
-                        <p class="card-humidity">Humidity: <span></span>%</p>
-            <!--Set current weather for park 2-->
-            <div class="parkname1"></div>
-                <h2>Glen Helen</h2>
-                <div class="row" data-attr="1">
-                    <div class="card">
-                        <h3 class="card-date"><span></span></h3>
-                        <p class="card-weather-icon"><span></span></p>
-                        <p class="card-temperature">Temp: <span></span>°F</p>
-                        <p class="card-humidity">Humidity: <span></span>%</p>
-            <!--Set current weather for park 3-->
-            <div class="parkname2">
-                <h2>Mill Creek Park</h2>
-                <div class="temperature-value">
-                    <p>- °<span>F</span></p>
-                </div>
-                
-            </div>
-        </section>
-      
     </main>
-    <div class="facts">
-        <section class="facts-title">
-            <h2>Ohio State Park Facts</h2>
-        </section>
-        <section class="fact-hocking-hills">
-            <h3>Hocking Hills Park</h3>
-            <p>
-                Hocking Hills State Park was the only U.S. location identified in Buzzfeed's list of "22 Stunning Under-The-Radar Destinations to Add to Your Bucket List in 2017"
-            </p>
-        </section>
-        <section class="fact-headlands">
-            <h3>Headlands Beach State Park</h3>
-            <p>
-                CNN Travel recognized Headlands Beach State Park in Mentor as one of 20 'can't miss' U.S. beaches
-            </p>
-        </section>
-        <section class="fact-mohican">
-            <h3>Mohican State Park</h3>
-            <p>
-                The Mohican State Park/Mohican State Forest was recognized for its mountain biking trail by Runner's World Magazine
-            </p>
-        </section>
-    </div>
-    <footer class="footer">
-        <h2>Safe Travels!</h2>
-        <p>
-            &copy; 2022 Take a Hike!, Inc.
-        </p>
+
+    <footer>
+
     </footer>
-   
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
-    <script src="https://kit.fontawesome.com/3190fd9e9f.js"></script>
     <script src="./assets/js/script.js"></script>
-  </body>
-
+</body>
 </html>
