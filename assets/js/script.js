@@ -20,6 +20,8 @@ bulmaCarousel.attach("#carousel", {
 
 
 //weather
+
+// function check weather for specific settings and zip code
 function checkWeather() {
     var settings ={
         "async": true,
@@ -28,11 +30,12 @@ function checkWeather() {
         "url": "http://api.openweathermap.org/data/2.5/weather?zip=82190,us&appid=da25d74f97cef3d0289a4a9c43c9c6af&units=imperial",
         "method": "GET"
     };
+    //run function
     $.ajax(settings)
-
+    //console log and display response
     .done(function (response) {
         console.log(response);
-
+        //modify specific elements in html
         $("#wind_speed").append (response.wind.speed);
         $("#main_temp").append (response.main.temp);
         $("#weather_conditions").append (response.weather[0].main);
