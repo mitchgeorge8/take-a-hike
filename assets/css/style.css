@@ -1,7 +1,4 @@
-.car-item img {
-    width: 100%;
-    height: auto;
-}
+
 
 * {
     box-sizing: border-box;
@@ -9,10 +6,7 @@
     margin: 0;
 }
 
-.image {
-    background-color: #ffffff;
-}
-
+/* header section */
 .header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -47,11 +41,37 @@ a {
     text-decoration: none;
 }
 
-.hero {
+/* jumbotron carousel */
+
+.carousel {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.container-carousel-hike {
     height: 600px;
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 }
+
+
+.car-item {
+    padding: 10px;
+    width: 100%;
+}
+/* fix arrow buttons in carousel */
+
+.image {
+    width: 100%;
+}
+.slider-navigation-next {
+    left: auto;
+    right: 12px;
+}
+
+/* main content */
 
 .float-left {
     float: left;
@@ -76,17 +96,24 @@ section {
     color: #ffffff;
 }
 
-section img {
-    height: 100%;
-    width: auto;
-    object-fit: cover;
-    object-position: 50% 50%;
+
+.where-to-go img {
+    max-height: 200px;
+}
+
+.finding-parks img {
+    max-height: 200px;
+}
+
+.weather img {
+    max-height: 200px;
 }
 
 .where-to-go h2 {
     margin-bottom: 20px;
     font-size: 36px;
     color: white;
+    
 }
 
 .locations h2 {
@@ -101,6 +128,8 @@ section img {
     color: white;
 }
 
+/* side content */
+
 .facts {
     margin-right: 20px;
     padding: 20px;
@@ -114,56 +143,68 @@ section img {
 
 .facts-title {
     margin-bottom: 32px;
-    color: #ffffff; 
+    color: #ffffff;
+    height: min-content; 
+    font-size: 30px;
+    text-align: center;
 }
 
 .fact-hocking-hills {
     margin-bottom: 32px;
     color: #ffffff;
+    height: min-content;
 }
 
 .fact-headlands {
     margin-bottom: 32px;
     color: #ffffff;
+    height: min-content;
 }
 
 .fact-mohican {
     margin-bottom: 32px;
     color: #ffffff;
+    height: min-content;
 }
 
 .fact-hocking-hills h3 {
     margin-bottom: 10px;
     text-align: center;
+    font-size: 25px;
 }
 
 .fact-headlands h3 {
     margin-bottom: 10px;
     text-align: center;
+    font-size: 25px;
 }
 
 .fact-mohican h3 {
     margin-bottom: 10px;
     text-align: center;
+    font-size: 25px;
 }
 
-.fact-hocking-hills img {
-    display: block;
+.fact-hocking-hills p {
+    /*display: block;
     margin: 10px auto;
-    max-width: 150px;
+    max-width: 150px;*/
+    font-size: 15px;
+    text-align: center;
 }
 
-.fact-headland img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
+.fact-headland p {
+    font-size: 15px;
+    text-align: center;
 }
 
-.fact-mohican img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
+.fact-mohican p {
+    font-size: 15px;
+    text-align: center;
 }
+
+
+/* footer */
 
 .footer {
     padding: 30px;
@@ -176,20 +217,11 @@ section img {
     font-size: 20px;
 }
 
-.carousel {
-    width: auto;
-    height: auto;
-    object-fit: cover;
-    object-position: 50% 50%;
-}
 
 .slider-item {
     height:600px
 }
 
-.car-item {
-    padding: 10px;
-}
 
 .parks-header {
     height: 10%;
