@@ -1,312 +1,299 @@
-
-
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 /* header section */
 .header {
-    padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #93c47d;
-    color: white;
+  padding: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #93c47d;
+  color: white;
 }
 
 .header h1 {
-    display: inline-block;
-    font-size: 48px;
+  display: inline-block;
+  font-size: 48px;
 }
 
 .header nav {
-    padding-top: 15px;
-    margin-right: 20px;
-    float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
+  padding-top: 15px;
+  margin-right: 20px;
+  float: right;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
 }
 
 .header nav ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .header nav ul li {
-    display: inline-block;
-    margin-left: 25px;
+  display: inline-block;
+  margin-left: 25px;
 }
 
 a {
-    color: #ffffff;
-    text-decoration: none;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 /* jumbotron carousel */
 
-.carousel {
-    width: auto;
-    height: auto;
-    object-fit: cover;
-    object-position: 50% 50%;
+.image {
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
-
-.container-carousel-hike {
-    height: 600px;
-    width: 100%;
-    margin-bottom: 5px;
-}
-
 
 .car-item {
-    padding: 10px;
-    width: 100%;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 /* fix arrow buttons in carousel */
 
-.image {
-    width: 100%;
-}
 .slider-navigation-next {
-    left: auto;
-    right: 12px;
+  left: auto;
+  right: 12px;
 }
 
 /* main content */
 
 .float-left {
-    float: left;
+  float: left;
 }
 
 .float-right {
-    float: right;
+  float: right;
 }
 
 .content {
-    width: 75%;
-    display: inline-block;
-    margin-left: 20px;
+  width: 75%;
+  display: inline-block;
+  margin-left: 20px;
+  height: fit-content;
 }
 
 section {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: fit-content;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #93c47d;
-    color: #ffffff;
+  margin-bottom: 20px;
+  padding: 50px;
+  height: fit-content;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #93c47d;
+  color: #ffffff;
 }
-
 
 /* Need some inspiration to get out there and explore? */
 .where-to-go h1 {
-    font-size: 40px;
-    text-align: center;
-    color: #ffffff;
+  color: #ffffff;
+  font-size: 45px;
 }
 
 /* Take a Hike, in Ohio. && Ohio's Regional Parks ("Metroparks"): ... */
 .where-to-go h2 {
-    font-size: 35px;
-    font-weight: bold;
-    font-style: italic;
-    width: auto;
-    color: #ffffff;
+  width: auto;
+  color: #ffffff;
 }
 
 /* the text right before/ right after videos */
 .where-to-go h3 {
-    font-size: 25px;
-    font-weight: bold;
-    font-style: oblique;
-    width: auto;
-    color: #ffffff;
+  width: auto;
+  color: #ffffff;
 }
 
 /* descriptions of parks, under h2 elements */
 .where-to-go h4 {
-    font-size: 20px;
-    width: auto;
-    color: #ffffff;
+  font-size: 20px;
+  width: auto;
+  color: #ffffff;
 }
 
 /* Need to resize the image to grow and shrink to different screeen sizes. */
 .where-to-go iframe {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 550px;
-    height: 315px;
-    box-shadow: 5px;
-    color: #ffffff;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 550px;
+  height: 315px;
+  box-shadow: 5px;
+  color: #ffffff;
 }
 
+.locations img {
+  max-width: 200px;
+  max-height: 200px;
+}
+.locations h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: white;
+}
+.columns {
+    margin: 0;
+  }
 
-.finding-parks img {
-    height: 100%;
+.weather {
+  rowspan: 3;
 }
 
 .weather img {
-    max-height: 200px;
+  max-width: 300px;
+  max-height: 300px;
 }
 
-
-.locations h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-    color: white;
+.weather p {
+  float: right;
 }
 
 .weather h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-    color: white;
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: white;
+  float: right;
 }
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    max-width: 300px;
+    height: fit-content;
+    position: relative;
+    padding: 34px;
+    color: #444;
+    cursor: pointer;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: #ccc;
+      left: 20px;
+      right: 20px;
+      bottom: 0;
+      top: 50%;
+      z-index: -1;
+      box-shadow: 0 0 40px lighten(#000, 60%);
+      transition: box-shadow 0.2s ease-in-out;
+    }
+    &.level-3 {
+      &:hover {
+        &:before {
+          box-shadow: 0 0 80px lighten(#000, 60%);
+        }
+      }
+    }
+  }
+  
 
 /* side content */
 
 .facts {
-    margin-right: 20px;
-    padding: 20px;
-    clear: both;
-    float: right;
-    width: 20%;
-    height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #93c47d;
+  margin-right: 20px;
+  padding: 20px;
+  clear: both;
+  float: right;
+  width: 20%;
+  height: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #93c47d;
 }
 
 .facts-title {
-    margin-bottom: 32px;
-    color: #ffffff;
-    height: min-content; 
-    font-size: 30px;
-    text-align: center;
+  margin-bottom: 32px;
+  color: #ffffff;
+  height: min-content;
+  font-size: 30px;
+  text-align: center;
 }
 
 .fact-hocking-hills {
-    margin-bottom: 32px;
-    color: #ffffff;
-    height: min-content;
+  margin-bottom: 32px;
+  color: #ffffff;
+  height: min-content;
 }
 
 .fact-headlands {
-    margin-bottom: 32px;
-    color: #ffffff;
-    height: min-content;
+  margin-bottom: 32px;
+  color: #ffffff;
+  height: min-content;
 }
 
 .fact-mohican {
-    margin-bottom: 32px;
-    color: #ffffff;
-    height: min-content;
+  margin-bottom: 32px;
+  color: #ffffff;
+  height: min-content;
 }
 
 .fact-hocking-hills h3 {
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 25px;
 }
 
 .fact-headlands h3 {
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 25px;
 }
 
 .fact-mohican h3 {
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 25px;
 }
 
 .fact-hocking-hills p {
-    /*display: block;
+  /*display: block;
     margin: 10px auto;
     max-width: 150px;*/
-    font-size: 15px;
-    text-align: center;
+  font-size: 15px;
+  text-align: center;
 }
 
 .fact-headland p {
-    font-size: 15px;
-    text-align: center;
+  font-size: 15px;
+  text-align: center;
 }
 
 .fact-mohican p {
-    font-size: 15px;
-    text-align: center;
+  font-size: 15px;
+  text-align: center;
 }
-
 
 /* footer */
 
 .footer {
-    padding: 30px;
-    clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
+  padding: 30px;
+  clear: both;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: center;
 }
 
 .footer h2 {
-    font-size: 20px;
+  font-size: 20px;
 }
 
-.card {
-	background-color: #fff;
-	border-radius: 8px;
-	max-width: 300px;
-	margin: 10% auto;
-	height: 200px;
-	position: relative;
-	padding: 34px;
-	color: #444;
-	cursor: pointer;
-	&:before {
-		content: '';
-		display: block;
-		position: absolute;
-		background-color: #ccc;
-		left: 20px;
-		right: 20px;
-		bottom: 0;
-		top: 50%;
-		z-index: -1;
-		box-shadow: 0 0 40px lighten(#000, 60%);
-		transition: box-shadow .2s ease-in-out;
-	}
-	&.level-3 {
-		&:hover {
-			&:before {
-				box-shadow: 0 0 80px lighten(#000, 60%);
-			}
-		}
-	}
-}
 
-.weather {
-    rowspan: 3;
-}
-
-.container-1{
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px,200px));
-	grid-gap: 0.5em;
+.container-1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 200px));
+  grid-gap: 0.5em;
 }
 
 .slider-item {
-    height:600px
+  height: 600px;
 }
 
-
 .parks-header {
-    height: 10%;
+  height: 10%;
 }
 
 .parks-list {
-    height: 300px;
-    overflow: auto;
+  height: 300px;
+  overflow: auto;
 }
 
-.columns {
-    margin: 0;
-}
