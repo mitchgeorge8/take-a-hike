@@ -29,7 +29,7 @@ Our webpage, [Take a Hike](https://mitchgeorge8.github.io/take-a-hike/) targets 
 --------------------------------------------------------------------------------------------------------------------------------
 <br>
 
-### 👨‍💻 Those involved in the development of this project (Group #8 members):
+### 👨‍💻 Those involved in the development of this project (Group 8 members):
 - Mitchell George
 - Joe Beike
 - Megan Beekman
