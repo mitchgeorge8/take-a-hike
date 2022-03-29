@@ -15,6 +15,31 @@ bulmaCarousel.attach("#carousel", {
     infinite: true
 });
 
+//weather
+
+// function check weather for specific settings and zip code
+function checkWeather() {
+    var settings ={
+        "async": true,
+        "crossDomain": true,
+        "dataType": "json",
+        "url": "http://api.openweathermap.org/data/2.5/weather?zip=82190,us&appid=da25d74f97cef3d0289a4a9c43c9c6af&units=imperial",
+        "method": "GET"
+    };
+    //run function
+    $.ajax(settings)
+    //console log and display response
+    .done(function (response) {
+        console.log(response);
+        //modify specific elements in html
+        $("#wind_speed").append (response.wind.speed);
+        $("#main_temp").append (response.main.temp);
+        $("#weather_conditions").append (response.weather[0].main);
+        $("#wind_speed_unit").append (" MPH");
+        $("#main_temp_unit").append (" F");
+    });
+  };
+
 let addStateDropdown = function() {
     for (i=0; i<stateArr.length; i++) {
         let optionEl = $("<option>")
@@ -53,6 +78,7 @@ let getLocations = function(abbr, state) {
     });
 };
 
+// parks
 let displayParks = function(parks, state) {
     parksHeaderEl.text("Select a state from the dropdown");
     parksListEl.text("");

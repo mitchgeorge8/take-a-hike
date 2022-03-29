@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Take a Hike!</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -48,6 +47,7 @@
                     <!-- Slide Content -->
                     <img class="image" src="./assets/images/mill-creek-park.png">
                 </div>
+                <!-- End Carousel -->
             </div>
         </div>
 
@@ -124,6 +124,32 @@
                 <p>
                     Find what the weather will be like at your park!
                 </p>
+                <h2>Top National Parks Weather</h2>
+                <button type="button" onclick="checkWeather()" class="btn btn-danger weatherbutton">Check Weather</button>
+               <div class="container-1">
+
+                <div class="card level-3 row" id="0">
+
+                <h3>Yellowstone National Park</h3>
+                <span><b>Temperature: </b></span><span id="main_temp"></span><span id="main_temp_unit"></span><br />
+                <span><b>Wind speed: </b></span><span id="wind_speed"></span> <span id="wind_speed_unit"></span><br />
+                <span><b>Current conditions: </b></span><span id="weather_conditions"></span>
+                </div>
+                <div class="card level-3 row" id="1">
+
+                    <h3>Coming Soon!</h3>
+                    <span><b>Temperature: </b></span><span id="main_temp"></span><span id="main_temp_unit"></span><br />
+                    <span><b>Wind speed: </b></span><span id="wind_speed"></span> <span id="wind_speed_unit"></span><br />
+                    <span><b>Current conditions: </b></span><span id="weather_conditions1"></span>
+                </div>
+                <div class="card level-3 row" id="2">
+
+                    <h3>Coming Soon!</h3>
+                    <span><b>Temperature: </b></span><span id="main_temp"></span><span id="main_temp_unit"></span><br />
+                    <span><b>Wind speed: </b></span><span id="wind_speed"></span> <span id="wind_speed_unit"></span><br />
+                    <span><b>Current conditions: </b></span><span id="weather_conditions"></span>
+                </div>
+                </div>
             </section>
         
         </main>
@@ -156,10 +182,9 @@
             &copy; 2022 Take a Hike!, Inc.
         </p>
     </footer>
-   
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
-    <script src="https://kit.fontawesome.com/3190fd9e9f.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 
