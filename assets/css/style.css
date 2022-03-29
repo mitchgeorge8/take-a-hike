@@ -1,42 +1,306 @@
-body {
-    padding: 30px;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-header h1 {
-    font-size: 24px;
+/* header section */
+.header {
+  padding: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #93c47d;
+  color: white;
 }
 
-header nav ul li a {
-    color: black;
+.header h1 {
+  display: inline-block;
+  font-size: 48px;
 }
 
-.slider-item {
-    height: 600px;
+.header nav {
+  padding-top: 15px;
+  margin-right: 20px;
+  float: right;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+}
+
+.header nav ul {
+  list-style-type: none;
+}
+
+.header nav ul li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* jumbotron carousel */
+
+.image {
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 .car-item {
-    height: auto;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* fix arrow buttons in carousel */
+
+.slider-navigation-next {
+  left: auto;
+  right: 12px;
 }
 
-.image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: 50% 50%;
+/* main content */
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.content {
+  width: 75%;
+  display: inline-block;
+  margin-left: 20px;
+  height: fit-content;
 }
 
 section {
-    padding: 20px 0;
+  margin-bottom: 20px;
+  padding: 50px;
+  height: fit-content;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #93c47d;
+  color: #ffffff;
 }
 
-.select {
-    padding: 0;
-    padding-left: .5em;
+/* Need some inspiration to get out there and explore? */
+.where-to-go h1 {
+  color: #ffffff;
+  font-size: 45px;
 }
 
-.box:not(:last-child) {
-    margin-bottom: 5px;
+/* Take a Hike, in Ohio. && Ohio's Regional Parks ("Metroparks"): ... */
+.where-to-go h2 {
+  width: auto;
+  color: #ffffff;
 }
+
+/* the text right before/ right after videos */
+.where-to-go h3 {
+  width: auto;
+  color: #ffffff;
+}
+
+/* descriptions of parks, under h2 elements */
+.where-to-go h4 {
+  font-size: 20px;
+  width: auto;
+  color: #ffffff;
+}
+
+/* Need to resize the image to grow and shrink to different screeen sizes. */
+.where-to-go iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 550px;
+  height: 315px;
+  box-shadow: 5px;
+  color: #ffffff;
+}
+
+.locations img {
+  max-width: 200px;
+  max-height: 200px;
+}
+.locations h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: white;
+}
+.columns {
+    margin: 0;
+  }
+
+.weather {
+  height: 500px;
+  width: 100%;
+  float: right;
+}
+
+.weather img {
+  max-width: 300px;
+  max-height: 300px;
+  padding: 10px;
+}
+
+.weather p {
+  padding-bottom: 10px;
+}
+
+.weather h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: white;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    max-width: 300px;
+    height: fit-content;
+    position: relative;
+    padding: 34px;
+    color: #444;
+    cursor: pointer;
+    &:before {
+      content: "";
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      background-color: #ccc;
+      left: 20px;
+      right: 20px;
+      bottom: 0;
+      top: 50%;
+      z-index: -1;
+      box-shadow: 0 0 40px lighten(#000, 60%);
+      transition: box-shadow 0.2s ease-in-out;
+    }
+    &.level-3 {
+      &:hover {
+        &:before {
+          box-shadow: 0 0 80px lighten(#000, 60%);
+        }
+      }
+    }
+  }
+
+  .container-1 {
+    float: left;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 200px));
+    grid-gap: 0.5em;
+  }
+
+  
+/* side content */
+
+.facts {
+  margin-right: 20px;
+  padding: 20px;
+  clear: both;
+  float: right;
+  width: 20%;
+  height: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #93c47d;
+}
+
+.facts-title {
+  margin-bottom: 32px;
+  color: #ffffff;
+  height: min-content;
+  font-size: 30px;
+  text-align: center;
+}
+
+.fact-hocking-hills {
+  margin-bottom: 32px;
+  color: #ffffff;
+  height: min-content;
+}
+
+.fact-headlands {
+  margin-bottom: 32px;
+  color: #ffffff;
+  height: min-content;
+}
+
+.fact-mohican {
+  margin-bottom: 32px;
+  color: #ffffff;
+  height: min-content;
+}
+
+.fact-hocking-hills h3 {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.fact-headlands h3 {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.fact-mohican h3 {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.fact-hocking-hills p {
+  /*display: block;
+    margin: 10px auto;
+    max-width: 150px;*/
+  font-size: 15px;
+  text-align: center;
+}
+
+.fact-headland p {
+  font-size: 15px;
+  text-align: center;
+}
+
+.fact-mohican p {
+  font-size: 15px;
+  text-align: center;
+}
+
+/* footer */
+
+.footer {
+  padding: 30px;
+  clear: both;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+}
+
+.footer h2 {
+  font-size: 20px;
+}
+
+
+.slider-item {
+  height: 600px;
+}
+
+.parks-header {
+  height: 10%;
+}
+
+.parks-list {
+  height: 300px;
+  overflow: auto;
+}
+
