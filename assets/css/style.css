@@ -137,23 +137,25 @@ section {
   }
 
 .weather {
-  rowspan: 3;
+  height: 500px;
+  width: 100%;
+  float: right;
 }
 
 .weather img {
   max-width: 300px;
   max-height: 300px;
+  padding: 10px;
 }
 
 .weather p {
-  float: right;
+  padding-bottom: 10px;
 }
 
 .weather h2 {
   margin-bottom: 20px;
   font-size: 36px;
   color: white;
-  float: right;
 }
 
 .card {
@@ -167,7 +169,8 @@ section {
     cursor: pointer;
     &:before {
       content: "";
-      display: block;
+      display: flex;
+      flex-direction: row;
       position: absolute;
       background-color: #ccc;
       left: 20px;
@@ -186,8 +189,18 @@ section {
       }
     }
   }
-  
 
+  .container-1 {
+    float: left;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 200px));
+    grid-gap: 0.5em;
+  }
+
+  
 /* side content */
 
 .facts {
@@ -277,12 +290,6 @@ section {
   font-size: 20px;
 }
 
-
-.container-1 {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 200px));
-  grid-gap: 0.5em;
-}
 
 .slider-item {
   height: 600px;
